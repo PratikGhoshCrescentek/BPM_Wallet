@@ -2,6 +2,7 @@ import React,{Component, useState} from 'react';
 import { Modal, StatusBar, Keyboard, ActivityIndicator, View, Text, ImageBackground, StyleSheet, AsyncStorage, Platform, FlatList, ScrollView, TouchableOpacity, Linking, SafeAreaView, TextInput, Image, Dimensions } from 'react-native'
 import { SvgXml } from 'react-native-svg';
 import SignInBtn from '../components/SignInBtnUI';
+import KeyboardManager from 'react-native-keyboard-manager';
 const userXML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.00036 7.99998C10.0517 7.99998 11.7146 6.33704 11.7146 4.2857C11.7146 2.23435 10.0517 0.571411 8.00036 0.571411C5.94901 0.571411 4.28607 2.23435 4.28607 4.2857C4.28607 6.33704 5.94901 7.99998 8.00036 7.99998Z" stroke="#969696" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M15.0632 15.4286C14.5834 13.9324 13.6409 12.6273 12.3715 11.7013C11.1022 10.7753 9.57156 10.2764 8.00036 10.2764C6.42915 10.2764 4.89853 10.7753 3.62918 11.7013C2.35982 12.6273 1.4173 13.9324 0.9375 15.4286H15.0632Z" stroke="#969696" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
@@ -16,10 +17,10 @@ const PasswordXML = `<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
 <path d="M9.8223 1.74859C9.45428 1.37374 9.01487 1.07644 8.53003 0.874263C8.04519 0.672082 7.52475 0.569117 6.99944 0.57145C5.93858 0.57145 4.92116 0.992877 4.17101 1.74302C3.42087 2.49317 2.99944 3.51058 2.99944 4.57145V6.28574M2.42801 6.28574H11.5709C12.2021 6.28574 12.7137 6.79741 12.7137 7.42859V14.2857C12.7137 14.9169 12.2021 15.4286 11.5709 15.4286H2.42801C1.79683 15.4286 1.28516 14.9169 1.28516 14.2857V7.42859C1.28516 6.79741 1.79683 6.28574 2.42801 6.28574ZM7.57087 10.8572C7.57087 11.1728 7.31503 11.4286 6.99944 11.4286C6.68385 11.4286 6.42801 11.1728 6.42801 10.8572C6.42801 10.5416 6.68385 10.2857 6.99944 10.2857C7.31503 10.2857 7.57087 10.5416 7.57087 10.8572Z" stroke="#969696" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;
 
-const PasswordHiddenShow = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.1184 5.2343C15.308 5.4443 15.4129 5.71713 15.4129 6.00002C15.4129 6.2829 15.308 6.55573 15.1184 6.76573C13.9184 8.05716 11.187 10.5714 7.99843 10.5714C4.80986 10.5714 2.07843 8.05716 0.878429 6.76573C0.688897 6.55573 0.583984 6.2829 0.583984 6.00002C0.583984 5.71713 0.688897 5.4443 0.878429 5.2343C2.07843 3.94287 4.80986 1.42859 7.99843 1.42859C11.187 1.42859 13.9184 3.94287 15.1184 5.2343Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.99817 8.28573C9.26054 8.28573 10.2839 7.26238 10.2839 6.00002C10.2839 4.73765 9.26054 3.7143 7.99817 3.7143C6.73581 3.7143 5.71246 4.73765 5.71246 6.00002C5.71246 7.26238 6.73581 8.28573 7.99817 8.28573Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;
+const crossXML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM10.8294 9.88561C11.0897 10.146 11.0897 10.5681 10.8294 10.8284C10.569 11.0888 10.1469 11.0888 9.88657 10.8284L8.00061 8.94246L6.11463 10.8284C5.85428 11.0888 5.43217 11.0888 5.17182 10.8284C4.91148 10.5681 4.91148 10.146 5.17182 9.88563L7.0578 7.99965L5.17252 6.11437C4.91217 5.85402 4.91217 5.43191 5.17252 5.17157C5.43287 4.91122 5.85498 4.91122 6.11533 5.17157L8.00061 7.05684L9.88587 5.17159C10.1462 4.91124 10.5683 4.91124 10.8287 5.17159C11.089 5.43194 11.089 5.85405 10.8287 6.1144L8.94342 7.99965L10.8294 9.88561Z" fill="white"/>
+</svg>
+`;
 
 const nextBtnXML = `<svg width="96" height="36" viewBox="0 0 96 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="96" height="36" rx="18" fill="url(#paint0_linear_68_4593)"/>
@@ -32,6 +33,17 @@ const nextBtnXML = `<svg width="96" height="36" viewBox="0 0 96 36" fill="none" 
 </linearGradient>
 </defs>
 </svg>`;
+
+const intersectImage = `<svg width="96" height="220" viewBox="0 0 96 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M96 55.7572V218.579C81.6108 227.036 74.0181 179.174 65.0293 122.512C60.3952 93.2994 55.39 61.748 48.8911 34.3687C67.4237 44.9196 83.091 51.3263 96 55.7572ZM38.849 0C39.6032 1.95213 40.3208 3.95177 41 5.99997C43.8732 14.6637 46.4845 24.2302 48.8911 34.3687C39.3572 28.9409 29.065 22.4164 18 14.5C11.2474 9.6689 5.32747 4.83058 0.174251 0L38.849 0Z" fill="url(#paint0_linear_84_6358)"/>
+<defs>
+<linearGradient id="paint0_linear_84_6358" x1="48.0871" y1="0" x2="48.0871" y2="219.553" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7878E7"/>
+<stop offset="1" stop-color="#1982B3"/>
+</linearGradient>
+</defs>
+</svg>`;
+
 
 
 export default class Profile extends Component {
@@ -48,7 +60,16 @@ export default class Profile extends Component {
       TextBoxPlaceholderColor: '#4F4F4F',
       PWDTextBoxBackgroundColor: 'null',
       PWDTextBoxBorderColor: '#4F4F4F',
-      PWDTextBoxPlaceholderColor: '#4F4F4F'
+      PWDTextBoxPlaceholderColor: '#4F4F4F',
+      crossEmailVisible: false,
+      crossPasswordVisible: false,
+      passwordHiddenShowVisible: true,
+      emailErrorText: '',
+      passwordErrorText: '',
+      PasswordHiddenShow: `<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.1184 5.2343C15.308 5.4443 15.4129 5.71713 15.4129 6.00002C15.4129 6.2829 15.308 6.55573 15.1184 6.76573C13.9184 8.05716 11.187 10.5714 7.99843 10.5714C4.80986 10.5714 2.07843 8.05716 0.878429 6.76573C0.688897 6.55573 0.583984 6.2829 0.583984 6.00002C0.583984 5.71713 0.688897 5.4443 0.878429 5.2343C2.07843 3.94287 4.80986 1.42859 7.99843 1.42859C11.187 1.42859 13.9184 3.94287 15.1184 5.2343Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7.99817 8.28573C9.26054 8.28573 10.2839 7.26238 10.2839 6.00002C10.2839 4.73765 9.26054 3.7143 7.99817 3.7143C6.73581 3.7143 5.71246 4.73765 5.71246 6.00002C5.71246 7.26238 6.73581 8.28573 7.99817 8.28573Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`
 
     };
    
@@ -56,15 +77,81 @@ export default class Profile extends Component {
   componentDidMount = async () => 
   {
   
-    
+    if (Platform.OS === 'ios') {
+      KeyboardManager.setEnable(true);
+    }
   }
   typingEmail = (text) =>
   {
-    this.setState({email: text})
+    this.setState({email: text, crossEmailVisible: true, errEmail: false})
 
    
       console.log('heee dlaskdj')
     
+  }
+  clearEmailText = () =>
+  {
+    this.setState({email: '', crossEmailVisible: false})
+  }
+
+  typingPassword = (text) =>
+  {
+    this.setState({password: text, crossPasswordVisible: true, errPassword: false})
+
+   
+      console.log('heee dlaskdj')
+    
+  }
+  clearPasswordText = () =>
+  {
+    this.setState({password: '', crossPasswordVisible: false})
+  }
+  passwordHiddenOrShow= () =>
+  {
+if (this.state.passwordHiddenShowVisible == true)
+{
+  this.setState({passwordHiddenShowVisible: false, PasswordHiddenShow: `<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M14.0458 5.17149C14.4801 5.56006 14.8458 5.9372 15.1201 6.23435C15.3096 6.44435 15.4146 6.71718 15.4146 7.00006C15.4146 7.28294 15.3096 7.55577 15.1201 7.76577C13.9201 9.0572 11.1887 11.5715 8.00011 11.5715H7.54297M4.42324 10.5772C3.09939 9.83579 1.90321 8.88656 0.880382 7.76579C0.690851 7.55579 0.585937 7.28296 0.585938 7.00008C0.585937 6.7172 0.690851 6.44437 0.880382 6.23436C2.08038 4.94294 4.81181 2.42865 8.00038 2.42865C9.25727 2.45492 10.4874 2.79683 11.5775 3.42294M14.2863 0.714355L1.71484 13.2858M6.38913 8.6115C5.95989 8.18481 5.7174 7.6053 5.71484 7.00007C5.71484 6.39386 5.95566 5.81248 6.38431 5.38383C6.81297 4.95517 7.39435 4.71436 8.00056 4.71436C8.60579 4.71691 9.1853 4.9594 9.61199 5.38864M9.98894 8.14292C9.7855 8.4907 9.49374 8.77851 9.14323 8.97721" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`})
+}
+else
+{
+  this.setState({passwordHiddenShowVisible: true, PasswordHiddenShow: `<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.1184 5.2343C15.308 5.4443 15.4129 5.71713 15.4129 6.00002C15.4129 6.2829 15.308 6.55573 15.1184 6.76573C13.9184 8.05716 11.187 10.5714 7.99843 10.5714C4.80986 10.5714 2.07843 8.05716 0.878429 6.76573C0.688897 6.55573 0.583984 6.2829 0.583984 6.00002C0.583984 5.71713 0.688897 5.4443 0.878429 5.2343C2.07843 3.94287 4.80986 1.42859 7.99843 1.42859C11.187 1.42859 13.9184 3.94287 15.1184 5.2343Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7.99817 8.28573C9.26054 8.28573 10.2839 7.26238 10.2839 6.00002C10.2839 4.73765 9.26054 3.7143 7.99817 3.7143C6.73581 3.7143 5.71246 4.73765 5.71246 6.00002C5.71246 7.26238 6.73581 8.28573 7.99817 8.28573Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`})
+}
+  }
+
+  signInBtnPressed = () =>
+  {
+    Keyboard.dismiss()
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+
+    if (this.state.email.trim() == '' && this.state.password.trim() == '')
+    {
+      this.setState({errEmail: true, errPassword: true, emailErrorText: 'Email Address field can not be blank',
+    passwordErrorText: 'Password field can not be blank', 
+    TextBoxBorderColor: 'red', PWDTextBoxBorderColor: 'red'})
+    }
+    else if (this.state.email.trim() == '')
+    {
+      this.setState({errEmail: true, emailErrorText: 'Email Address field can not be blank', TextBoxBorderColor: 'red'
+    })
+    }
+    else if (this.state.password.trim() == '')
+    {
+      this.setState({errPassword: true, passwordErrorText: 'Password field can not be blank', PWDTextBoxBorderColor: 'red'})
+    }
+    else if (reg.test(this.state.email.trim()) === false) {
+      
+      this.setState({errEmail: true, emailErrorText: 'Email is Not Correct', TextBoxBorderColor: 'red'
+    })
+    }
+    else 
+    {
+      this.setState({errEmail: false, TextBoxBorderColor: '#4F4F4F', PWDTextBoxBorderColor: '#4F4F4F'})
+    }
   }
   
   render() {
@@ -74,7 +161,9 @@ export default class Profile extends Component {
     return (
       
       <View style ={styles.container}>
-       
+<View style={styles.intersectImage}>
+<SvgXml xml={intersectImage} />
+</View> 
         <StatusBar backgroundColor='#4387bb' barStyle={'light-content'} />
 <SafeAreaView>
 <View style={styles.titleLabelContainer}>
@@ -106,23 +195,14 @@ Sign in to your account
                   keyboardType="email-address"
                   style={styles.inputTag}
                 />
-                 <View style={styles.inputIconCheck}>
-                  <SvgXml width={20} xml={EmailCheck} />
-                </View>
-              </View>
+              {this.state.crossEmailVisible && <TouchableOpacity
+      style={styles.inputIconCheck}
+      onPress={() => this.clearEmailText()}>
+                  <SvgXml width={20} xml={crossXML} />
+                  </TouchableOpacity> }
+              </View> 
 
-              {this.state.errEmail && <Text style={{
-        marginTop: 5,
-        color: 'red',
-        fontSize: 11,
-        marginBottom: -15,
-        alignSelf: 'flex-start',
-        marginLeft: 16,
-        marginRight: 16,
-        fontFamily: 'Poppins-Light',
-    fontWeight: '400',
-    fontSize: 12
-    }}>{'This email address is not valid.'}</Text> }
+              {this.state.errEmail && <Text style={styles.errText}>{this.state.emailErrorText}</Text> }
            
               <Text style={[styles.plainText, { marginTop: 32 }]}>Password</Text>
               <View style={[styles.inputContainer, 
@@ -134,44 +214,48 @@ Sign in to your account
                 onBlur={ () => this.onBlurPWD() }
                 onFocus={ () => this.onFocusPWD() }
                   value={this.state.password}
-                  onChangeText={(text) => this.setState({password: text})}
+                  onChangeText={(text) => this.typingPassword(text)}
                   placeholder="Enter Password"
                   placeholderTextColor={this.state.PWDTextBoxPlaceholderColor}
                   keyboardType='default'
+                  secureTextEntry={this.state.passwordHiddenShowVisible}
                   style={styles.inputTag}
                 />
-                 <View style={styles.inputIconCheck}>
-                  <SvgXml width={20} xml={PasswordHiddenShow} />
-                </View>
+
+{ this.state.crossPasswordVisible && <TouchableOpacity onPress={() => this.clearPasswordText()} style={styles.inputIconCheckForPasswordCross}>
+                  <SvgXml width={20} xml={crossXML} />
+                </TouchableOpacity> }
+
+                { this.state.crossPasswordVisible && <TouchableOpacity onPress={() => this.passwordHiddenOrShow()} style={styles.inputIconCheckForPasswordHiddenOrShow}>
+                  <SvgXml width={20} xml={this.state.PasswordHiddenShow} />
+                </TouchableOpacity> }
               </View>
+
+              {this.state.errPassword && <Text style={styles.errText}>{this.state.passwordErrorText}</Text> }
 
               <TouchableOpacity
       style={styles.ForgotPasswordContainer}
-      onPress={() => console.log('sign up btn pressed!!!!!')}>
+      onPress={() => this.props.navigation.navigate('ForgotPasswordPage')}>
               <Text style={[styles.ForgotPasswordText, { marginTop: 12 }]}>Forgot Password?</Text>
               </TouchableOpacity>
 
 
               <View style={[styles.ForgotPasswordContainer, {marginTop: 20}]}>          
-<SignInBtn style={{marginTop: 100}} onPress={() => console.log('next btn clicked!!!')}></SignInBtn>
+<SignInBtn style={{marginTop: 100}} onPress={() => this.signInBtnPressed()}></SignInBtn>
 </View>
               
             </View>
 
 
           </SafeAreaView>
-          <TouchableOpacity
-                onPress={this.props.navigation.navigate('TermsAndCondsForOrder')}
-                style={styles.SignInButton}>
-
-                </TouchableOpacity>
+          
 
                 <View style = {styles.donthaveanAccount}>
 
 <Text style={styles.donthaveanAccountText}>{"Don't have an account? "}</Text> 
 <TouchableOpacity
       style={styles.SignUp}
-      onPress={() => console.log('sign up btn pressed!')}>
+      onPress={() => this.props.navigation.navigate('SignUpPersonalDetailsPage')}>
     <Text style={styles.signupText}>
       Sign Up
     </Text>
@@ -202,7 +286,8 @@ Sign in to your account
     this.setState({
       TextBoxBackgroundColor: 'transparent',
       TextBoxBorderColor: '#4F4F4F',
-      TextBoxPlaceholderColor: '#4F4F4F'
+      TextBoxPlaceholderColor: '#4F4F4F',
+      crossEmailVisible: false
     })
   }
 
@@ -210,7 +295,8 @@ Sign in to your account
     this.setState({
       PWDTextBoxBackgroundColor: '#4F4F4F',
       PWDTextBoxBorderColor: 'white',
-      PWDTextBoxPlaceholderColor: 'white'
+      PWDTextBoxPlaceholderColor: 'white',
+      
         
     })
   }
@@ -219,7 +305,8 @@ Sign in to your account
     this.setState({
       PWDTextBoxBackgroundColor: 'transparent',
       PWDTextBoxBorderColor: '#4F4F4F',
-      PWDTextBoxPlaceholderColor: '#4F4F4F'
+      PWDTextBoxPlaceholderColor: '#4F4F4F',
+      crossPasswordVisible: false
     })
   }
 
@@ -307,6 +394,22 @@ alignSelf: 'flex-end'
 marginTop: -35,
 marginLeft: -30
       },
+      inputIconCheckForPasswordCross: {
+        // backgroundColor: GlobalStyle.colorSet.iconBackGround,
+        height: '100%',
+        width: 50,
+        justifyContent: 'flex-end',
+marginTop: -32,
+marginLeft: -50
+      },
+      inputIconCheckForPasswordHiddenOrShow: {
+        // backgroundColor: GlobalStyle.colorSet.iconBackGround,
+        height: '100%',
+        width: 50,
+        justifyContent: 'flex-end',
+marginTop: -35,
+marginLeft: -25
+      },
       inputTag: {
         width: '85%',
         paddingLeft: 0,
@@ -345,8 +448,25 @@ paddingRight: 40
         })
       },
     ],
+    errText: {
+      marginTop: 5,
+      color: 'red',
+      fontSize: 11,
+      marginBottom: -15,
+      alignSelf: 'flex-start',
+      marginLeft: 16,
+      marginRight: 16,
+      fontFamily: 'Poppins-Light',
+  fontWeight: '400',
+  fontSize: 12
+  },
     signupText: {
       color: '#000', fontSize: 15.2, color: '#03BFB5',
-    }
+    },
+    intersectImage: {position: 'absolute',
+    width: 95.83,
+    height: 219.55,
+    right: 0,
+    top: 0}
 
 })

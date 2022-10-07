@@ -115,7 +115,7 @@ export default class Profile extends Component {
 <Text style={styles.donthaveanAccountText}>{"Don't have an account? "}</Text> 
 <TouchableOpacity
       style={styles.SignUp}
-      onPress={() => console.log('sign up btn pressed!!!!!')}>
+      onPress={() => this.props.navigation.navigate('SignUpPersonalDetailsPage')}>
     <Text style={styles.signupText}>
       Sign Up
     </Text>

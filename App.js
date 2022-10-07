@@ -8,6 +8,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {navigationRef} from './Route';
 import SignInPage from './Screen/SignIn';
 import IntroductionPage from './Screen/Introduction';
+import ForgotPasswordPage from './Screen/ForgotPassword';
+import CheckMailPage from './Screen/CheckMail';
+import CreateNewPasswordPage from './Screen/CreateNewPassword';
+import ResetPasswordDonePage from './Screen/ResetPasswordDone';
+import SignUpPersonalDetailsPage from './Screen/SignUpPersonalDetails';
 
  const AuthStack = createNativeStackNavigator();
 function HomeScreen({ navigation }) {
@@ -60,8 +65,27 @@ const AuthStackScreen = () => (
         headerShown: false,
         headerTitle: 'Orders'
       }}/>
+      <AuthStack.Screen name="ForgotPasswordPage" component={ForgotPasswordPage}  options={{
+        headerShown: false,
+        headerTitle: 'Orders'
+      }}/>
+      <AuthStack.Screen name="CheckMailPage" component={CheckMailPage}  options={{
+        headerShown: false,
+        headerTitle: 'Orders'
+      }}/>
+      <AuthStack.Screen name="CreateNewPasswordPage" component={CreateNewPasswordPage}  options={{
+        headerShown: false,
+        headerTitle: 'Orders'
+      }}/>
+      <AuthStack.Screen name="ResetPasswordDonePage" component={ResetPasswordDonePage}  options={{
+        headerShown: false,
+        headerTitle: 'Orders'
+      }}/>
+      <AuthStack.Screen name="SignUpPersonalDetailsPage" component={SignUpPersonalDetailsPage}  options={{
+        headerShown: false,
+        headerTitle: 'Orders'
+      }}/>
       
-    
   </AuthStack.Navigator>
 );
 const RootStack = createNativeStackNavigator();
