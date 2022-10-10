@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0JX-rI-ole">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="YQ7-hq-BFE">
+            <objects>
+                <viewController id="0JX-rI-ole" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kMj-Ex-CKw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch_Screen" translatesAutoresizingMaskIntoConstraints="NO" id="ESH-ei-EMt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yxn-w1-yMT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ESH-ei-EMt" firstAttribute="leading" secondItem="kMj-Ex-CKw" secondAttribute="leading" id="k9u-th-uoo"/>
+                            <constraint firstAttribute="bottom" secondItem="ESH-ei-EMt" secondAttribute="bottom" id="mDD-iY-qQ2"/>
+                            <constraint firstItem="ESH-ei-EMt" firstAttribute="top" secondItem="kMj-Ex-CKw" secondAttribute="top" id="mRK-ZU-Bdp"/>
+                            <constraint firstAttribute="trailing" secondItem="ESH-ei-EMt" secondAttribute="trailing" id="yTj-kc-lrk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySZ-f1-sX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-961" y="361"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
@@ -16,21 +43,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch_Screen" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-6A-Rok">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETq-V8-QbU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kOg-IU-BwV"/>
                         <color key="backgroundColor" red="0.0" green="0.73025149109999998" blue="0.68967717890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UYC-6A-Rok" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="E1V-aC-4ip"/>
-                            <constraint firstItem="UYC-6A-Rok" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="E37-OT-cHT"/>
-                            <constraint firstItem="UYC-6A-Rok" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Xm1-31-pSB"/>
-                            <constraint firstItem="UYC-6A-Rok" firstAttribute="centerY" secondItem="kOg-IU-BwV" secondAttribute="centerY" id="Y4m-oP-sIZ"/>
-                            <constraint firstAttribute="trailing" secondItem="UYC-6A-Rok" secondAttribute="trailing" id="fM3-uB-hkX"/>
-                            <constraint firstAttribute="bottom" secondItem="UYC-6A-Rok" secondAttribute="bottom" id="pxZ-i3-yjU"/>
-                            <constraint firstItem="UYC-6A-Rok" firstAttribute="centerX" secondItem="kOg-IU-BwV" secondAttribute="centerX" id="vMo-eG-PYL"/>
-                            <constraint firstItem="UYC-6A-Rok" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="z9h-kl-veY"/>
+                            <constraint firstItem="ETq-V8-QbU" firstAttribute="top" secondItem="kOg-IU-BwV" secondAttribute="top" id="CF8-xL-Dgl"/>
+                            <constraint firstItem="ETq-V8-QbU" firstAttribute="leading" secondItem="kOg-IU-BwV" secondAttribute="leading" id="dPS-Ot-BMt"/>
+                            <constraint firstItem="kOg-IU-BwV" firstAttribute="bottom" secondItem="ETq-V8-QbU" secondAttribute="bottom" id="k7v-WB-vcU"/>
+                            <constraint firstItem="kOg-IU-BwV" firstAttribute="trailing" secondItem="ETq-V8-QbU" secondAttribute="trailing" id="w5S-Ad-yGp"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -42,5 +66,8 @@
     </scenes>
     <resources>
         <image name="Launch_Screen" width="750" height="1334"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

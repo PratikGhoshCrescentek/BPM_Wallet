@@ -1,5 +1,4 @@
-import React,{Component, useState} from 'react';
-import { Modal, StatusBar, Keyboard, ActivityIndicator, View, Text, ImageBackground, StyleSheet, AsyncStorage, Platform, FlatList, ScrollView, TouchableOpacity, Linking, SafeAreaView, TextInput, Image, Dimensions } from 'react-native'
+import { StyleSheet, TouchableOpacity } from 'react-native'
 import { SvgXml } from 'react-native-svg';
 
 const nextBtnXML = `<svg width="96" height="36" viewBox="0 0 96 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,10 +16,7 @@ const nextBtnXML = `<svg width="96" height="36" viewBox="0 0 96 36" fill="none" 
 
 export default function custom_button({onPress}){
   return(
-      //  <TouchableOpacity style={[styles.container1,buttonStyle && buttonStyle]} onPress={onPress} >
-      //     <Text style={[styles.text1,txtStyle && txtStyle]}>{txt}</Text>
-      // </TouchableOpacity>
-
+      
 <TouchableOpacity
 onPress={onPress}
 style={styles.SignInButton}>
