@@ -13,6 +13,7 @@ import CheckMailPage from './Screen/CheckMail';
 import CreateNewPasswordPage from './Screen/CreateNewPassword';
 import ResetPasswordDonePage from './Screen/ResetPasswordDone';
 import SignUpPersonalDetailsPage from './Screen/SignUpPersonalDetails';
+import SignUpAccountDetailsPage from './Screen/SignUpAccountDetails';
 
  const AuthStack = createNativeStackNavigator();
 function HomeScreen({ navigation }) {
@@ -85,6 +86,11 @@ const AuthStackScreen = () => (
         headerShown: false,
         headerTitle: 'Orders'
       }}/>
+      <AuthStack.Screen name="SignUpAccountDetailsPage" component={SignUpAccountDetailsPage}  options={{
+        headerShown: false,
+        headerTitle: 'Orders'
+      }}/>
+      
       
   </AuthStack.Navigator>
 );

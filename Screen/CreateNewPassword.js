@@ -60,9 +60,9 @@ export default class Profile extends Component {
       email: '',
       emailErrorText: '',
       errEmail: false,
-      TextBoxBackgroundColor: 'null',
+      TextBoxBackgroundColor: '#222222',
       TextBoxBorderColor: '#4F4F4F',
-      TextBoxPlaceholderColor: '#4F4F4F',
+      TextBoxPlaceholderColor: '#969696',
       crossEmailVisible: false,
 
         confirm_email: '',
@@ -70,9 +70,9 @@ export default class Profile extends Component {
         confirm_errEmail: false,
         confirm_crossEmailVisible: false,
         confirm_tickVisible: false,
-        confirm_TextBoxBackgroundColor: 'null',
+        confirm_TextBoxBackgroundColor: '#222222',
         confirm_TextBoxBorderColor: '#4F4F4F',
-        confirm_TextBoxPlaceholderColor: '#4F4F4F',
+        confirm_TextBoxPlaceholderColor: '#969696',
 
         TickXML: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_198_6479)">
@@ -242,7 +242,9 @@ Your new password must be different from previous used passwords.
     </Text>
 </View>
 
-<View style={styles.LoginBody}>
+<ScrollView
+        // keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps={'always'} style={styles.LoginBody}>
               <Text style={styles.plainText}>New password</Text>
               <View style={[styles.inputContainer, 
                 {backgroundColor: this.state.TextBoxBackgroundColor, borderColor: this.state.TextBoxBorderColor}]}>
@@ -305,7 +307,7 @@ style={[styles.ForgotPasswordContainer, {marginTop: 35}]}>
 
 
               
-            </View>
+            </ScrollView>
 
 
           </SafeAreaView>
@@ -323,36 +325,32 @@ style={[styles.ForgotPasswordContainer, {marginTop: 35}]}>
 
   onFocusEmail() {
     this.setState({
-        TextBoxBackgroundColor: '#4F4F4F',
         TextBoxBorderColor: 'white',
-        TextBoxPlaceholderColor: 'white'
+        TextBoxPlaceholderColor: '#BEBEBE'
         
     })
   }
 
   onBlurEmail() {
     this.setState({
-      TextBoxBackgroundColor: 'transparent',
       TextBoxBorderColor: '#4F4F4F',
-      TextBoxPlaceholderColor: '#4F4F4F',
+      TextBoxPlaceholderColor: '#969696',
       crossEmailVisible: false
     })
   }
 
   onFocusConfirmEmail() {
     this.setState({
-      confirm_TextBoxBackgroundColor: '#4F4F4F',
       confirm_TextBoxBorderColor: 'white',
-      confirm_TextBoxPlaceholderColor: 'white'
+      confirm_TextBoxPlaceholderColor: '#BEBEBE'
         
     })
   }
 
   onBlurConfirmEmail() {
     this.setState({
-      confirm_TextBoxBackgroundColor: 'transparent',
       confirm_TextBoxBorderColor: '#4F4F4F',
-      confirm_TextBoxPlaceholderColor: '#4F4F4F',
+      confirm_TextBoxPlaceholderColor: '#969696',
       confirm_crossEmailVisible: false
     })
   }
@@ -390,8 +388,8 @@ top: 250,
   titleText: {
 width: 343,
 height: 172, 
-fontFamily: 'Poppins-Light',
-fontWeight: 'bold',
+fontFamily: 'Poppins-SemiBold',
+// fontWeight: 'bold',
 color: 'white',
 fontSize: 28
   },
@@ -399,7 +397,7 @@ fontSize: 28
     width: 343,
     height: 72, 
     fontFamily: 'Poppins-Light',
-    fontWeight: '400',
+    // fontWeight: '400',
     color: 'white',
     fontSize: 16
       },
@@ -415,14 +413,14 @@ top: 328,
         color: 'white',
         marginLeft: 16,
 marginRight: 16,
-fontFamily: 'Poppins-Light',
-fontWeight: '500',
+fontFamily: 'Poppins-SemiBold',
+// fontWeight: '500',
 fontSize: 16
       },
       ForgotPasswordText: {
         color: '#03BFB5',
 fontFamily: 'Poppins-Light',
-fontWeight: '400',
+// fontWeight: '400',
 fontSize: 12,
       },
       ForgotPasswordContainer: {
@@ -432,7 +430,7 @@ alignSelf: 'flex-end'
       },
       inputContainer: {
         borderWidth: 1,
-        height: 50,
+        height: 36,
         alignItems: 'center',
         // borderColor: '#4F4F4F',
         flexDirection: 'row',
@@ -453,7 +451,7 @@ alignSelf: 'flex-end'
         height: '100%',
         width: 50,
         justifyContent: 'flex-end',
-marginTop: -35,
+marginTop: -20,
 marginLeft: -30
       },
       inputIconCheckForPasswordCross: {
@@ -461,7 +459,7 @@ marginLeft: -30
         height: '100%',
         width: 50,
         justifyContent: 'flex-end',
-marginTop: -32,
+marginTop: -20,
 marginLeft: -50
       },
       inputIconCheckForPasswordHiddenOrShow: {
@@ -478,8 +476,8 @@ marginLeft: -25
         paddingRight: 3,
         color: 'white',
         fontFamily: 'Poppins-Light',
-fontWeight: '400',
-fontSize: 16,
+// fontWeight: '400',
+fontSize: 14,
 paddingRight: 40
       },
   SignInButton: {borderWidth:1,position:'absolute',bottom:106,alignSelf:'center'},
@@ -527,7 +525,7 @@ paddingRight: 40
       marginLeft: 16,
       marginRight: 16,
       fontFamily: 'Poppins-Light',
-  fontWeight: '400',
+  // fontWeight: '400',
   fontSize: 12
   }
 

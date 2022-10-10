@@ -164,7 +164,7 @@ top: 164,
 
   },
   donthaveanAccountText: {
-    paddingTop: 4, fontWeight: '500', paddingBottom: 4,  fontSize: 16, color: 'white', fontFamily: 'Poppins-Light'
+    paddingTop: 4, paddingBottom: 4,  fontSize: 16, color: 'white', fontFamily: 'Poppins-Light'
     },
     SignUp: [
       {
@@ -182,7 +182,7 @@ top: 164,
       },
     ],
     signupText: {
-      color: '#000', fontSize: 15.2, color: '#03BFB5',fontFamily: 'Poppins-Light', fontWeight: '500',
+      color: '#000', fontSize: 15.2, color: '#03BFB5',fontFamily: 'Poppins-Light',
     }
 
 })

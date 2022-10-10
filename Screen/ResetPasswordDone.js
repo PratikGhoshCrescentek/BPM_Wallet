@@ -177,8 +177,8 @@ top: 305,
   titleText: {
 // width: 343,
 height: 172, 
-fontFamily: 'Poppins-Light',
-fontWeight: 'bold',
+fontFamily: 'Poppins-SemiBold',
+// fontWeight: 'bold',
 color: 'white',
 fontSize: 28
   },
@@ -186,7 +186,7 @@ fontSize: 28
     // width: 343,
     height: 72, 
     fontFamily: 'Poppins-Light',
-    fontWeight: '400',
+    // fontWeight: '400',
     color: 'white',
     fontSize: 16,
     alignSelf: 'center',
@@ -196,7 +196,7 @@ fontSize: 28
         // width: 343,
         height: 72, 
         fontFamily: 'Poppins-Light',
-        fontWeight: '500',
+        // fontWeight: '500',
         color: 'white',
         fontSize: 14,
         alignSelf: 'center',
@@ -214,13 +214,13 @@ top: 348,
         marginLeft: 16,
 marginRight: 16,
 fontFamily: 'Poppins-Light',
-fontWeight: '500',
+// fontWeight: '500',
 fontSize: 16
       },
       ForgotPasswordText: {
         color: '#03BFB5',
 fontFamily: 'Poppins-Light',
-fontWeight: '400',
+// fontWeight: '400',
 fontSize: 12,
       },
       ForgotPasswordContainer: {
@@ -275,7 +275,7 @@ marginLeft: -25
         paddingRight: 3,
         color: 'white',
         fontFamily: 'Poppins-Light',
-fontWeight: '400',
+// fontWeight: '400',
 fontSize: 16,
 paddingRight: 40
       },
@@ -295,7 +295,7 @@ paddingRight: 40
   },
   donthaveanAccountText: {
     paddingTop: 4, paddingBottom: 4, color: 'white',fontFamily: 'Poppins-Light',
-    fontWeight: '500',
+    // fontWeight: '500',
     fontSize: 16,
     },
     SignUp: [
@@ -315,7 +315,7 @@ paddingRight: 40
     ],
     signupText: {
       color: '#000', fontSize: 14, color: 'white',fontFamily: 'Poppins-Light',
-      fontWeight: '600',
+      // fontWeight: '600',
     },
     intersectImage: {position: 'absolute',
     width: 95.83,

@@ -9,11 +9,17 @@ const userXML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xml
 </svg>`;
 
 const logoXML = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.0007 16C20.1034 16 23.4293 12.6741 23.4293 8.57139C23.4293 4.46871 20.1034 1.14282 16.0007 1.14282C11.898 1.14282 8.57214 4.46871 8.57214 8.57139C8.57214 12.6741 11.898 16 16.0007 16Z" stroke="white" stroke-width="2.28571" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M30.1264 30.8571C29.1668 27.8648 27.2818 25.2545 24.7431 23.4026C22.2044 21.5507 19.1431 20.5527 16.0007 20.5527C12.8583 20.5527 9.79707 21.5507 7.25835 23.4026C4.71963 25.2545 2.83459 27.8648 1.875 30.8571H30.1264Z" stroke="white" stroke-width="2.28571" stroke-linecap="round" stroke-linejoin="round"/>
+<g clip-path="url(#clip0_68_4640)">
+<path d="M5.46182 9.14282V3.42854C5.46182 2.82233 5.70264 2.24095 6.13129 1.81229C6.55995 1.38364 7.14133 1.14282 7.74754 1.14282H19.1761M19.1761 1.14282L30.6047 12.5714M19.1761 1.14282V12.5714H30.6047M30.6047 12.5714V28.5714C30.6047 29.1776 30.3639 29.759 29.9352 30.1876C29.5066 30.6163 28.9252 30.8571 28.319 30.8571H20.319M8.31896 14.8571V18.2857M8.31896 18.2857C5.79423 18.2857 3.74754 20.3324 3.74754 22.8571C3.74754 25.3818 5.79423 27.4285 8.31896 27.4285M8.31896 18.2857C10.8437 18.2857 12.8904 20.3324 12.8904 22.8571C12.8904 25.3818 10.8437 27.4285 8.31896 27.4285M1.39325 18.8571L4.36468 20.5714M1.39325 26.8571L4.36468 25.1428M8.31896 30.8571V27.4285M15.2447 26.8571L12.2732 25.1428M15.2447 18.8571L12.2732 20.5714" stroke="white" stroke-width="2.28571" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_68_4640">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
 </svg>`;
 
-const PasswordXML = `<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+const confirmEmailXML = `<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.8223 1.74859C9.45428 1.37374 9.01487 1.07644 8.53003 0.874263C8.04519 0.672082 7.52475 0.569117 6.99944 0.57145C5.93858 0.57145 4.92116 0.992877 4.17101 1.74302C3.42087 2.49317 2.99944 3.51058 2.99944 4.57145V6.28574M2.42801 6.28574H11.5709C12.2021 6.28574 12.7137 6.79741 12.7137 7.42859V14.2857C12.7137 14.9169 12.2021 15.4286 11.5709 15.4286H2.42801C1.79683 15.4286 1.28516 14.9169 1.28516 14.2857V7.42859C1.28516 6.79741 1.79683 6.28574 2.42801 6.28574ZM7.57087 10.8572C7.57087 11.1728 7.31503 11.4286 6.99944 11.4286C6.68385 11.4286 6.42801 11.1728 6.42801 10.8572C6.42801 10.5416 6.68385 10.2857 6.99944 10.2857C7.31503 10.2857 7.57087 10.5416 7.57087 10.8572Z" stroke="#969696" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;
 
@@ -33,16 +39,17 @@ const BackIconXML = `<svg width="24" height="14" viewBox="0 0 24 14" fill="none"
 <path d="M6.25161 13.6061C6.58634 13.9408 7.12906 13.9408 7.46379 13.6061C7.79853 13.2713 7.79853 12.7286 7.46379 12.3939L2.92703 7.85712L23.1429 7.85712C23.6162 7.85712 24 7.47336 24 6.99997C24 6.52659 23.6162 6.14283 23.1429 6.14283L2.92703 6.14283L7.46379 1.60607C7.79853 1.27133 7.79853 0.728618 7.46379 0.393883C7.12906 0.0591478 6.58634 0.0591478 6.25161 0.393883L0.269794 6.3757C0.103704 6.53202 0 6.75389 0 6.99997C0 7.24606 0.103704 7.46793 0.269794 7.62425L6.25161 13.6061Z" fill="white"/>
 </svg>`;
 
-const unionColor1 = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="9" cy="9" r="9" fill="url(#paint0_linear_263_4054)"/>
+const unionColor1 = `<svg width="136" height="18" viewBox="0 0 136 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C13.2832 18 16.8675 15.008 17.777 11H118.223C119.132 15.008 122.717 18 127 18C131.971 18 136 13.9706 136 9C136 4.02944 131.971 0 127 0C122.717 0 119.132 2.99202 118.223 7H17.777C16.8675 2.99202 13.2832 0 9 0C4.02944 0 0 4.02944 0 9C0 13.9706 4.02944 18 9 18Z" fill="url(#paint0_linear_198_1076)"/>
 <defs>
-<linearGradient id="paint0_linear_263_4054" x1="9" y1="0" x2="9" y2="18" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_198_1076" x1="68" y1="0" x2="68" y2="18" gradientUnits="userSpaceOnUse">
 <stop stop-color="#00E4D8"/>
 <stop offset="0.506433" stop-color="#03BFB5"/>
 <stop offset="1" stop-color="#0B7F79"/>
 </linearGradient>
 </defs>
-</svg>`;
+</svg>
+`;
 
 const unionColor2 = `<svg width="113" height="4" viewBox="0 0 113 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="113" height="4" fill="#222222"/>
@@ -52,11 +59,13 @@ const unionColor3 = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
 <circle cx="9" cy="9" r="9" fill="#222222"/>
 </svg>`;
 
-const unionColor4 = `<svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.4075 6V4.336H3.7355V16H1.8955V6H0.4075ZM12.4013 0.895999L8.04925 18.8H6.25725L10.5933 0.895999H12.4013ZM14.428 7.216C14.492 6.224 14.8707 5.45067 15.564 4.896C16.268 4.34133 17.164 4.064 18.252 4.064C18.9987 4.064 19.644 4.19733 20.188 4.464C20.732 4.73067 21.1427 5.09333 21.42 5.552C21.6973 6.01067 21.836 6.528 21.836 7.104C21.836 7.76533 21.66 8.33067 21.308 8.8C20.956 9.26933 20.5347 9.584 20.044 9.744V9.808C20.6733 10 21.164 10.352 21.516 10.864C21.868 11.3653 22.044 12.0107 22.044 12.8C22.044 13.4293 21.9 13.9893 21.612 14.48C21.324 14.9707 20.8973 15.36 20.332 15.648C19.7667 15.9253 19.0893 16.064 18.3 16.064C17.148 16.064 16.1987 15.7707 15.452 15.184C14.716 14.5867 14.3213 13.7333 14.268 12.624H16.028C16.0707 13.1893 16.2893 13.6533 16.684 14.016C17.0787 14.368 17.612 14.544 18.284 14.544C18.9347 14.544 19.436 14.368 19.788 14.016C20.14 13.6533 20.316 13.1893 20.316 12.624C20.316 11.8773 20.076 11.3493 19.596 11.04C19.1267 10.72 18.4013 10.56 17.42 10.56H17.004V9.056H17.436C18.3 9.04533 18.956 8.90133 19.404 8.624C19.8627 8.34667 20.092 7.90933 20.092 7.312C20.092 6.8 19.9267 6.39467 19.596 6.096C19.2653 5.78667 18.796 5.632 18.188 5.632C17.5907 5.632 17.1267 5.78667 16.796 6.096C16.4653 6.39467 16.268 6.768 16.204 7.216H14.428Z" fill="white"/>
+const unionColor4 = `<svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.01488 13.52C3.03888 12.6347 3.84421 11.9093 4.43088 11.344C5.02821 10.768 5.52421 10.1707 5.91888 9.552C6.31354 8.93333 6.51088 8.31467 6.51088 7.696C6.51088 7.056 6.35621 6.55467 6.04688 6.192C5.74821 5.82933 5.27354 5.648 4.62288 5.648C3.99354 5.648 3.50288 5.85067 3.15088 6.256C2.80954 6.65067 2.62821 7.184 2.60688 7.856H0.846875C0.878875 6.64 1.24154 5.712 1.93488 5.072C2.63888 4.42133 3.52954 4.096 4.60688 4.096C5.76954 4.096 6.67621 4.416 7.32688 5.056C7.98821 5.696 8.31888 6.54933 8.31888 7.616C8.31888 8.384 8.12154 9.12533 7.72688 9.84C7.34288 10.544 6.87888 11.1787 6.33488 11.744C5.80154 12.2987 5.11888 12.944 4.28688 13.68L3.56688 14.32H8.63888V15.84H0.862875V14.512L2.01488 13.52ZM16.4013 0.895999L12.0493 18.8H10.2573L14.5933 0.895999H16.4013ZM18.428 7.216C18.492 6.224 18.8707 5.45067 19.564 4.896C20.268 4.34133 21.164 4.064 22.252 4.064C22.9987 4.064 23.644 4.19733 24.188 4.464C24.732 4.73067 25.1427 5.09333 25.42 5.552C25.6973 6.01067 25.836 6.528 25.836 7.104C25.836 7.76533 25.66 8.33067 25.308 8.8C24.956 9.26933 24.5347 9.584 24.044 9.744V9.808C24.6733 10 25.164 10.352 25.516 10.864C25.868 11.3653 26.044 12.0107 26.044 12.8C26.044 13.4293 25.9 13.9893 25.612 14.48C25.324 14.9707 24.8973 15.36 24.332 15.648C23.7667 15.9253 23.0893 16.064 22.3 16.064C21.148 16.064 20.1987 15.7707 19.452 15.184C18.716 14.5867 18.3213 13.7333 18.268 12.624H20.028C20.0707 13.1893 20.2893 13.6533 20.684 14.016C21.0787 14.368 21.612 14.544 22.284 14.544C22.9347 14.544 23.436 14.368 23.788 14.016C24.14 13.6533 24.316 13.1893 24.316 12.624C24.316 11.8773 24.076 11.3493 23.596 11.04C23.1267 10.72 22.4013 10.56 21.42 10.56H21.004V9.056H21.436C22.3 9.04533 22.956 8.90133 23.404 8.624C23.8627 8.34667 24.092 7.90933 24.092 7.312C24.092 6.8 23.9267 6.39467 23.596 6.096C23.2653 5.78667 22.796 5.632 22.188 5.632C21.5907 5.632 21.1267 5.78667 20.796 6.096C20.4653 6.39467 20.268 6.768 20.204 7.216H18.428Z" fill="white"/>
 </svg>`;
 
-
+const stepper = `<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3223 1.74847C10.9543 1.37362 10.5149 1.07632 10.03 0.874141C9.54519 0.67196 9.02475 0.568995 8.49944 0.571328C7.43858 0.571328 6.42116 0.992755 5.67101 1.7429C4.92087 2.49305 4.49944 3.51046 4.49944 4.57133V6.28561M3.92801 6.28561H13.0709C13.7021 6.28561 14.2137 6.79729 14.2137 7.42847V14.2856C14.2137 14.9168 13.7021 15.4285 13.0709 15.4285H3.92801C3.29683 15.4285 2.78516 14.9168 2.78516 14.2856V7.42847C2.78516 6.79729 3.29683 6.28561 3.92801 6.28561ZM9.07087 10.857C9.07087 11.1726 8.81503 11.4285 8.49944 11.4285C8.18385 11.4285 7.92801 11.1726 7.92801 10.857C7.92801 10.5415 8.18385 10.2856 8.49944 10.2856C8.81503 10.2856 9.07087 10.5415 9.07087 10.857Z" stroke="#969696" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
 
 export default class Profile extends Component {
   constructor(props) {
@@ -64,19 +73,19 @@ export default class Profile extends Component {
     this.state = {
 
       date: '',
-      dateTextBoxBackgroundColor: '#222222',
+      dateTextBoxBackgroundColor: 'null',
       dateTextBoxBorderColor: '#4F4F4F',
-      dateTextBoxPlaceholderColor: '#969696',
+      dateTextBoxPlaceholderColor: '#4F4F4F',
 
       month: '',
-      monthTextBoxBackgroundColor: '#222222',
+      monthTextBoxBackgroundColor: 'null',
       monthTextBoxBorderColor: '#4F4F4F',
-      monthTextBoxPlaceholderColor: '#969696',
+      monthTextBoxPlaceholderColor: '#4F4F4F',
 
       year: '',
-      yearTextBoxBackgroundColor: '#222222',
+      yearTextBoxBackgroundColor: 'null',
       yearTextBoxBorderColor: '#4F4F4F',
-      yearTextBoxPlaceholderColor: '#969696',
+      yearTextBoxPlaceholderColor: '#4F4F4F',
 
       dobErrorText: '',
       errDob: false,
@@ -84,18 +93,21 @@ export default class Profile extends Component {
       email: '',
       password: '',
       errEmail: false,
+      HasSentEmail: false,
       errPassword: false,
-      TextBoxBackgroundColor: '#222222',
+      TextBoxBackgroundColor: 'null',
       TextBoxBorderColor: '#4F4F4F',
-      TextBoxPlaceholderColor: '#969696',
-      PWDTextBoxBackgroundColor: '#222222',
+      TextBoxPlaceholderColor: '#4F4F4F',
+      PWDTextBoxBackgroundColor: 'null',
       PWDTextBoxBorderColor: '#4F4F4F',
-      PWDTextBoxPlaceholderColor: '#969696',
+      PWDTextBoxPlaceholderColor: '#4F4F4F',
       crossEmailVisible: false,
       crossPasswordVisible: false,
       passwordHiddenShowVisible: true,
       emailErrorText: '',
       passwordErrorText: '',
+      showEmailDiv: false,
+      showConfirmedEmailDiv: true,
       PasswordHiddenShow: `<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M15.1184 5.2343C15.308 5.4443 15.4129 5.71713 15.4129 6.00002C15.4129 6.2829 15.308 6.55573 15.1184 6.76573C13.9184 8.05716 11.187 10.5714 7.99843 10.5714C4.80986 10.5714 2.07843 8.05716 0.878429 6.76573C0.688897 6.55573 0.583984 6.2829 0.583984 6.00002C0.583984 5.71713 0.688897 5.4443 0.878429 5.2343C2.07843 3.94287 4.80986 1.42859 7.99843 1.42859C11.187 1.42859 13.9184 3.94287 15.1184 5.2343Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M7.99817 8.28573C9.26054 8.28573 10.2839 7.26238 10.2839 6.00002C10.2839 4.73765 9.26054 3.7143 7.99817 3.7143C6.73581 3.7143 5.71246 4.73765 5.71246 6.00002C5.71246 7.26238 6.73581 8.28573 7.99817 8.28573Z" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,10 +169,6 @@ onPress={() => this.props.navigation.goBack()} style={styles.backIconContainer}>
 <SvgXml left={16} xml={unionColor2}/></View>
 <View>
 <SvgXml left={16} xml={unionColor3}/></View>
-<View style={{marginTop: 7}}>
-<SvgXml left={16} xml={unionColor2}/></View>
-<View>
-<SvgXml left={16} xml={unionColor3}/></View>
 <View style={{marginLeft: 15}}>
 <SvgXml left={16} xml={unionColor4}/></View>
 </View>
@@ -172,35 +180,44 @@ onPress={() => this.props.navigation.goBack()} style={styles.backIconContainer}>
 
 <View style={styles.titleLabelContainer1}>
 <Text style={styles.titleText}>
-A bit about you
+Account details
     </Text>
 </View>
 
 <View style={styles.SignInTitleContainer}>
 <Text style={styles.SignInTitleText}>
-First, we need some personal details. Please 
+Please enter and confirm both your email 
     </Text>
 </View>
 
 <View style={[styles.SignInTitleContainer,{marginTop: 25}]}>
 <Text style={styles.SignInTitleText}>
-enter your name and date of birth.
+address and password below.
     </Text>
 </View>
 
-<ScrollView
-        keyboardShouldPersistTaps={'always'} style={styles.LoginBody}>
-              <Text style={styles.plainText}>First name</Text>
+<View style={styles.LoginBody}>
+{this.state.showConfirmedEmailDiv && <View><View style={styles.passwordLockContainer}>
+        <View style={{alignSelf: 'center', marginTop: 22}}>
+<SvgXml xml={stepper} />
+</View>
+<Text style={styles.PasswordTitle}>Password</Text>
+</View>
+</View>}
+  {this.state.showEmailDiv && <View>
+              <Text style={styles.plainText}>Email address</Text>
               <View style={[styles.inputContainer, 
                 {backgroundColor: this.state.TextBoxBackgroundColor, borderColor: this.state.TextBoxBorderColor}]}>
-                
+                <View style={styles.inputIcon}>
+                  <SvgXml width={20} xml={userXML} />
+                </View>
                 <TextInput
                   value={this.state.email}
                   onBlur={ (e) => this.onBlurEmail(e.nativeEvent.text) }
                   
         onFocus={ () => this.onFocusEmail() }
                   onChangeText={(text) => this.typingEmail(text)}
-                  placeholder="Enter first name..."
+                  placeholder="Enter email address"
                   placeholderTextColor={this.state.TextBoxPlaceholderColor}
                   keyboardType='default'
                   style={styles.inputTag}
@@ -214,16 +231,18 @@ enter your name and date of birth.
 
               {this.state.errEmail && <Text style={styles.errText}>{this.state.emailErrorText}</Text> }
            
-              <Text style={[styles.plainText, { marginTop: 22 }]}>Last name</Text>
+              <Text style={[styles.plainText, { marginTop: 22 }]}>Confirm email address</Text>
               <View style={[styles.inputContainer, 
                 {backgroundColor: this.state.PWDTextBoxBackgroundColor, borderColor: this.state.PWDTextBoxBorderColor}]}>
-                
+                <View style={styles.inputIcon}>
+                  <SvgXml width={20} xml={confirmEmailXML} />
+                </View>
                 <TextInput
                 onBlur={ (e) => this.onBlurPWD(e.nativeEvent.text) }
                 onFocus={ () => this.onFocusPWD() }
                   value={this.state.password}
                   onChangeText={(text) => this.typingPassword(text)}
-                  placeholder="Enter last name..."
+                  placeholder="Confirm email address"
                   placeholderTextColor={this.state.PWDTextBoxPlaceholderColor}
                   keyboardType='default'
                   style={styles.inputTag}
@@ -237,70 +256,29 @@ enter your name and date of birth.
               </View>
 
               {this.state.errPassword && <Text style={styles.errText}>{this.state.passwordErrorText}</Text> }
-              
-              <Text style={[styles.plainText, { marginTop: 22 }]}>Date of birth</Text>
+              {this.state.HasSentEmail && <Text style={styles.sentEmailText}>{'We’ve sent a confirmation email to you. Please confirm your email address before continuing.'}</Text> }
+              </View>}
+              <View style={styles.passwordLockContainer}>
+        <View style={{alignSelf: 'center', marginTop: 22}}>
+<SvgXml xml={stepper} />
+</View>
+<Text style={styles.PasswordTitle}>Password</Text>
+</View>
+
+              {/* <Text style={[styles.plainText, { marginTop: 22 }]}>Date of birth</Text> */}
               <View style={{width: '60%', flexDirection: 'row'}}>
-              <View style={[styles.inputContainerForDOB, 
-                {backgroundColor: this.state.dateTextBoxBackgroundColor, borderColor: this.state.dateTextBoxBorderColor}]}>
-                
-                <TextInput
-                onBlur={ (e) => this.onBlurDate(e.nativeEvent.text) }
-                onFocus={ () => this.onFocusDate() }
-                maxLength={2}
-                  value={this.state.date}
-                  onChangeText={(text) => this.typingDate(text)}
-                  placeholder="DD"
-                  placeholderTextColor={this.state.dateTextBoxPlaceholderColor}
-                  keyboardType='decimal-pad'
-                  style={[styles.inputTag, {textAlign: 'center'}]}
-                />
-        
-              </View>
-
-              <View style={[styles.inputContainerForMonth, 
-                {backgroundColor: this.state.monthTextBoxBackgroundColor, borderColor: this.state.monthTextBoxBorderColor}]}>
-                
-                <TextInput
-                onBlur={ (e) => this.onBlurMonth(e.nativeEvent.text) }
-                onFocus={ () => this.onFocusMonth() }
-                maxLength={2}
-                  value={this.state.month}
-                  onChangeText={(text) => this.typingMonth(text)}
-                  placeholder="MM"
-                  placeholderTextColor={this.state.monthTextBoxPlaceholderColor}
-                  keyboardType='decimal-pad'
-                  style={[styles.inputTag, {textAlign: 'center'}]}
-                />
-        
-              </View>
-
-              <View style={[styles.inputContainerForYear, 
-                {backgroundColor: this.state.yearTextBoxBackgroundColor, borderColor: this.state.yearTextBoxBorderColor}]}>
-                
-                <TextInput
-                onBlur={ (e) => this.onBlurYear(e.nativeEvent.text) }
-                onFocus={ () => this.onFocusYear() }
-                maxLength={4}
-                  value={this.state.year}
-                  onChangeText={(text) => this.typingYear(text)}
-                  placeholder="YYYY"
-                  placeholderTextColor={this.state.yearTextBoxPlaceholderColor}
-                  keyboardType='decimal-pad'
-                  style={[styles.inputTag, {textAlign: 'center'}]}
-                />
-        
-              </View>
-              </View>
-              {this.state.errDob && <Text style={[styles.errText, {marginBottom: 30}]}>{this.state.dobErrorText}</Text> }
               
-            </ScrollView>
-           
+              </View>
+              {this.state.errDob && <Text style={styles.errText}>{this.state.dobErrorText}</Text> }
+              
+            </View>
+            
 
           </SafeAreaView>
           
           <View style = {{width: 343, position:'absolute',bottom:60,alignSelf:'flex-end', justifyContent: 'flex-end'}}>
               <TouchableOpacity
-onPress={() => console.log('testtt!')} 
+// onPress={() => this.OpenEmailAppBtnPressed()}
 style={[styles.ForgotPasswordContainer, {marginTop: 35}]}>
   <SvgXml xml={this.state.nextBtnXML} />
 </TouchableOpacity></View>
@@ -318,13 +296,9 @@ style={[styles.ForgotPasswordContainer, {marginTop: 35}]}>
 
   onFocusEmail() {
     this.setState({
-        //  TextBoxBackgroundColor: '#222222',
+        TextBoxBackgroundColor: '#4F4F4F',
         TextBoxBorderColor: 'white',
-        TextBoxPlaceholderColor: '#BEBEBE',
-        crossXMLForFName: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM10.8294 9.88561C11.0897 10.146 11.0897 10.5681 10.8294 10.8284C10.569 11.0888 10.1469 11.0888 9.88657 10.8284L8.00061 8.94246L6.11463 10.8284C5.85428 11.0888 5.43217 11.0888 5.17182 10.8284C4.91148 10.5681 4.91148 10.146 5.17182 9.88563L7.0578 7.99965L5.17252 6.11437C4.91217 5.85402 4.91217 5.43191 5.17252 5.17157C5.43287 4.91122 5.85498 4.91122 6.11533 5.17157L8.00061 7.05684L9.88587 5.17159C10.1462 4.91124 10.5683 4.91124 10.8287 5.17159C11.089 5.43194 11.089 5.85405 10.8287 6.1144L8.94342 7.99965L10.8294 9.88561Z" fill="white"/>
-      </svg>
-      `,
+        TextBoxPlaceholderColor: 'white'
         
     })
   }
@@ -334,9 +308,9 @@ style={[styles.ForgotPasswordContainer, {marginTop: 35}]}>
      console.log('text11156 is', text)
 
     this.setState({
-      // TextBoxBackgroundColor: 'transparent',
+      TextBoxBackgroundColor: 'transparent',
       TextBoxBorderColor: '#4F4F4F',
-      TextBoxPlaceholderColor: '#969696',
+      TextBoxPlaceholderColor: '#4F4F4F',
       // crossEmailVisible: false
     })
 
@@ -354,11 +328,6 @@ if (text.trim() != '')
   </svg>
   ` })
 }
-else
-{
-  this.setState({errEmail: true, emailErrorText: 'First Name field can not be blank',
-  TextBoxBorderColor: 'red', crossEmailVisible: false})
-}
 
 this.checkAllValidations(text)
 
@@ -367,8 +336,9 @@ this.checkAllValidations(text)
 
   onFocusPWD() {
     this.setState({
+      PWDTextBoxBackgroundColor: '#4F4F4F',
       PWDTextBoxBorderColor: 'white',
-      PWDTextBoxPlaceholderColor: '#BEBEBE',
+      PWDTextBoxPlaceholderColor: 'white',
       
         
     })
@@ -376,14 +346,14 @@ this.checkAllValidations(text)
 
   onBlurPWD(text) {
     this.setState({
-     
+      PWDTextBoxBackgroundColor: 'transparent',
       PWDTextBoxBorderColor: '#4F4F4F',
-      PWDTextBoxPlaceholderColor: '#969696',
+      PWDTextBoxPlaceholderColor: '#4F4F4F',
       // crossPasswordVisible: false
     })
-    if (text.trim() != '')
+    if (text.trim() != '' && text.trim() == this.state.email)
     {
-      this.setState({crossXMLForLName: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      this.setState({HasSentEmail: true,crossXMLForLName: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_198_7292)">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M1.63569 8.4544C1.37534 8.71475 1.37534 9.13686 1.63569 9.39721L4.92063 12.6821C4.92535 12.6872 4.93016 12.6921 4.93507 12.697C5.06322 12.8252 5.23056 12.8903 5.39851 12.8922C5.57192 12.8944 5.74602 12.8294 5.87833 12.697C5.8833 12.6921 5.88817 12.687 5.89295 12.682L14.3632 4.21175C14.6235 3.9514 14.6235 3.52929 14.3632 3.26894C14.1028 3.00859 13.6807 3.00859 13.4203 3.26894L5.4067 11.2826L2.5785 8.4544C2.31815 8.19405 1.89604 8.19405 1.63569 8.4544Z" fill="#008533"/>
       </g>
@@ -394,91 +364,18 @@ this.checkAllValidations(text)
       </defs>
       </svg>
       ` })
+
+      
     }
     else
-{
-  this.setState({errPassword: true, passwordErrorText: 'Last Name field can not be blank',
-  PWDTextBoxBorderColor: 'red', crossPasswordVisible: false})
-}
-
-    this.checkAllValidations(text)
-    
-  }
-
-  onFocusDate(text) {
-    this.setState({
-      dateTextBoxBorderColor: 'white',
-      dateTextBoxPlaceholderColor: '#BEBEBE',
-      
-        
-    })
-
-    
-  }
-
-  onBlurDate(text) {
-    this.setState({
-      dateTextBoxBorderColor: '#4F4F4F',
-      dateTextBoxPlaceholderColor: '#969696',
-    })
-
-    // console.log('date: ', parseInt('0', 10) + 1)
-
-    if (parseInt(text, 10) > 31)
     {
-      this.setState({errDob: true, dobErrorText: 'Please enter a valid date'})
+      this.setState({errPassword: true, crossPasswordVisible: false, passwordErrorText: 'Confirmed Email did not match'})
     }
 
-    this.checkAllValidations(text)
-  }
-
-  onFocusMonth() {
-    this.setState({
-      monthTextBoxBorderColor: 'white',
-      monthTextBoxPlaceholderColor: '#BEBEBE', 
-    })
-
+    // this.checkAllValidations(text)
     
   }
 
-  onBlurMonth(text) {
-    this.setState({
-      monthTextBoxBorderColor: '#4F4F4F',
-      monthTextBoxPlaceholderColor: '#969696',
-    })
-
-    if (parseInt(text, 10) > 12)
-    {
-      this.setState({errDob: true, dobErrorText: 'Please enter a valid month'})
-    }
-
-    this.checkAllValidations(text)
-  }
-
-  onFocusYear() {
-    this.setState({
-      yearTextBoxBorderColor: 'white',
-      yearTextBoxPlaceholderColor: '#BEBEBE',
-      
-        
-    })
-  }
-
-  onBlurYear(text) {
-
-    this.setState({
-      yearTextBoxBorderColor: '#4F4F4F',
-      yearTextBoxPlaceholderColor: '#969696',
-    })
-
-    if (parseInt(text, 10) > 2021)
-    {
-      this.setState({errDob: true, dobErrorText: 'Year should not be less than 2000. Please enter a valid year.'})
-    }
-
-    this.checkAllValidations(text)
-    
-  }
 
   resetNextButton = (text) =>
   {
@@ -500,7 +397,7 @@ this.checkAllValidations(text)
 
     if (this.state.email.trim() != '' && this.state.password.trim() != '' && 
     this.state.date.trim() != '' && this.state.month.trim() != '' && this.state.year.trim() != ''
-    && (parseInt(this.state.year, 10) < 2022) && (parseInt(this.state.month, 10) < 13) && (parseInt(this.state.date, 10) < 32))
+    && (parseInt(this.state.year, 10) > 2000) && (parseInt(this.state.month, 10) < 13) && (parseInt(this.state.date, 10) < 32))
     {
       this.setState({nextBtnXML: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="56" height="56" rx="28" fill="url(#paint0_linear_72_5514)"/>
@@ -541,26 +438,7 @@ this.checkAllValidations(text)
     this.setState({password: '', crossPasswordVisible: false})
   }
 
-  typingDate = (text) =>
-  {
-    this.setState({date: text, errDob: false})
-    this.resetNextButton()
-    
-  }
-
-  typingMonth = (text) =>
-  {
-    this.setState({month: text, errDob: false})
-    this.resetNextButton()
-
-    
-  }
-
-  typingYear = (text) =>
-  {
-    this.setState({year: text, errDob: false})
-    this.resetNextButton()
-  }
+  
   passwordHiddenOrShow= () =>
   {
 if (this.state.passwordHiddenShowVisible == true)
@@ -602,8 +480,8 @@ top: 250,
   titleText: {
     // width: 343,
     height: 172, 
-    fontFamily: 'Poppins-SemiBold',
-    // fontWeight: 'bold',
+    fontFamily: 'Poppins-Light',
+    fontWeight: 'bold',
     color: 'white',
     fontSize: 28
       },
@@ -611,7 +489,7 @@ top: 250,
         // width: 343,
         height: 72, 
         fontFamily: 'Poppins-Light',
-        // fontWeight: '400',
+        fontWeight: '400',
         color: 'white',
         fontSize: 16,
         alignSelf: 'center',
@@ -628,14 +506,14 @@ top: 330,
         color: 'white',
         marginLeft: 16,
 marginRight: 16,
-fontFamily: 'Poppins-SemiBold',
-// fontWeight: '500',
+fontFamily: 'Poppins-Light',
+fontWeight: '500',
 fontSize: 16
       },
       ForgotPasswordText: {
         color: '#03BFB5',
 fontFamily: 'Poppins-Light',
-// fontWeight: '400',
+fontWeight: '400',
 fontSize: 12,
       },
       ForgotPasswordContainer: {
@@ -645,7 +523,7 @@ alignSelf: 'flex-end'
       },
       inputContainer: {
         borderWidth: 1,
-        height: 36,
+        height: 50,
         alignItems: 'center',
         // borderColor: '#4F4F4F',
         flexDirection: 'row',
@@ -656,7 +534,7 @@ alignSelf: 'flex-end'
       },
       inputContainerForDOB: {
         borderWidth: 1,
-        height: 36,
+        height: 50,
         width: '30%',
         alignItems: 'center',
         flexDirection: 'row',
@@ -667,7 +545,7 @@ alignSelf: 'flex-end'
       },
       inputContainerForMonth: {
         borderWidth: 1,
-        height: 36,
+        height: 50,
         width: '30%',
         alignItems: 'center',
         flexDirection: 'row',
@@ -677,7 +555,7 @@ alignSelf: 'flex-end'
       },
       inputContainerForYear: {
         borderWidth: 1,
-        height: 36,
+        height: 50,
         width: '40%',
         alignItems: 'center',
         flexDirection: 'row',
@@ -696,7 +574,7 @@ alignSelf: 'flex-end'
         height: '100%',
         width: 50,
         justifyContent: 'flex-end',
-marginTop: -20,
+marginTop: -35,
 marginLeft: 20
       },
       inputIconCheckForPasswordCross: {
@@ -704,7 +582,7 @@ marginLeft: 20
         height: '100%',
         width: 50,
         justifyContent: 'flex-end',
-marginTop: -18,
+marginTop: -32,
 marginLeft: 20
       },
       inputIconCheckForPasswordHiddenOrShow: {
@@ -716,13 +594,13 @@ marginTop: -35,
 marginLeft: -25
       },
       inputTag: {
-        width: '85%',
-        paddingLeft: 8,
+        width: '73%',
+        paddingLeft: 0,
         paddingRight: 3,
         color: 'white',
         fontFamily: 'Poppins-Light',
-// fontWeight: '400',
-fontSize: 16,
+fontWeight: '400',
+fontSize: 14,
 paddingRight: 10,
       },
   SignInButton: {borderWidth:1,position:'absolute',bottom:106,alignSelf:'center'},
@@ -762,9 +640,21 @@ paddingRight: 10,
       marginLeft: 16,
       marginRight: 16,
       fontFamily: 'Poppins-Light',
-  // fontWeight: '400',
+  fontWeight: '400',
   fontSize: 12
   },
+  sentEmailText: {
+    marginTop: 5,
+    color: '#BEBEBE',
+    fontSize: 11,
+    marginBottom: -15,
+    alignSelf: 'flex-start',
+    marginLeft: 16,
+    marginRight: 16,
+    fontFamily: 'Poppins-Light',
+fontWeight: '400',
+fontSize: 12
+},
     signupText: {
       color: '#000', fontSize: 15.2, color: '#03BFB5',
     },
@@ -793,5 +683,10 @@ paddingRight: 10,
   alignSelf: 'center'
   // backgroundColor: 'red',
     },
+    PasswordTitle: { marginTop: 5, alignSelf: 'center', color: '#969696', fontFamily: 'Poppins-Light',
+    fontWeight: '400', fontSize: 14, },
+    passwordLockContainer: {marginTop: 40, marginLeft: 16, marginRight: 16, height: 80, borderWidth: 1,
+      borderColor: '#4F4F4F', borderRadius: 4}
+
 
 })

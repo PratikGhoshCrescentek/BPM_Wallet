@@ -50,9 +50,9 @@ export default class Profile extends Component {
       email: '',
       emailErrorText: '',
       errEmail: false,
-      TextBoxBackgroundColor: 'null',
+      TextBoxBackgroundColor: '#222222',
       TextBoxBorderColor: '#4F4F4F',
-      TextBoxPlaceholderColor: '#4F4F4F',
+      TextBoxPlaceholderColor: '#969696',
       crossEmailVisible: false,
     
 
@@ -150,7 +150,9 @@ Enter the email address assosiated with your account and we’ll send an email w
     </Text>
 </View>
 
-<View style={styles.LoginBody}>
+<ScrollView
+        // keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps={'always'} style={styles.LoginBody}>
               <Text style={styles.plainText}>Email Address</Text>
               <View style={[styles.inputContainer, 
                 {backgroundColor: this.state.TextBoxBackgroundColor, borderColor: this.state.TextBoxBorderColor}]}>
@@ -187,7 +189,7 @@ style={[styles.ForgotPasswordContainer, {marginTop: 35}]}>
 
 
               
-            </View>
+            </ScrollView>
 
 
           </SafeAreaView>
@@ -205,20 +207,35 @@ style={[styles.ForgotPasswordContainer, {marginTop: 35}]}>
 
   onFocusEmail() {
     this.setState({
-        TextBoxBackgroundColor: '#4F4F4F',
         TextBoxBorderColor: 'white',
-        TextBoxPlaceholderColor: 'white'
+        TextBoxPlaceholderColor: '#BEBEBE'
         
     })
   }
 
   onBlurEmail() {
     this.setState({
-      TextBoxBackgroundColor: 'transparent',
       TextBoxBorderColor: '#4F4F4F',
-      TextBoxPlaceholderColor: '#4F4F4F',
+      TextBoxPlaceholderColor: '#969696',
       crossEmailVisible: false
     })
+
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+
+     if (this.state.email.trim() == '')
+    {
+      this.setState({errEmail: true, emailErrorText: 'Email Address field can not be blank', TextBoxBorderColor: 'red'
+    })
+    }
+    else if (reg.test(this.state.email.trim()) === false) {
+      
+      this.setState({errEmail: true, emailErrorText: 'Email is Not Correct',TextBoxBorderColor: 'red'
+    })
+    }
+    else 
+    {
+
+    }
   }
 
 
@@ -254,8 +271,8 @@ top: 250,
   titleText: {
 width: 343,
 height: 172, 
-fontFamily: 'Poppins-Light',
-fontWeight: 'bold',
+fontFamily: 'Poppins-SemiBold',
+// fontWeight: 'bold',
 color: 'white',
 fontSize: 28
   },
@@ -263,7 +280,7 @@ fontSize: 28
     width: 343,
     height: 72, 
     fontFamily: 'Poppins-Light',
-    fontWeight: '400',
+    // fontWeight: '400',
     color: 'white',
     fontSize: 16
       },
@@ -279,14 +296,14 @@ top: 358,
         color: 'white',
         marginLeft: 16,
 marginRight: 16,
-fontFamily: 'Poppins-Light',
-fontWeight: '500',
+fontFamily: 'Poppins-SemiBold',
+// fontWeight: '500',
 fontSize: 16
       },
       ForgotPasswordText: {
         color: '#03BFB5',
 fontFamily: 'Poppins-Light',
-fontWeight: '400',
+// fontWeight: '400',
 fontSize: 12,
       },
       ForgotPasswordContainer: {
@@ -296,7 +313,7 @@ alignSelf: 'flex-end'
       },
       inputContainer: {
         borderWidth: 1,
-        height: 50,
+        height: 36,
         alignItems: 'center',
         // borderColor: '#4F4F4F',
         flexDirection: 'row',
@@ -317,7 +334,7 @@ alignSelf: 'flex-end'
         height: '100%',
         width: 50,
         justifyContent: 'flex-end',
-marginTop: -35,
+marginTop: -20,
 marginLeft: -30
       },
       inputIconCheckForPasswordCross: {
@@ -342,8 +359,8 @@ marginLeft: -25
         paddingRight: 3,
         color: 'white',
         fontFamily: 'Poppins-Light',
-fontWeight: '400',
-fontSize: 16,
+// fontWeight: '400',
+fontSize: 14,
 paddingRight: 40
       },
   SignInButton: {borderWidth:1,position:'absolute',bottom:106,alignSelf:'center'},
@@ -391,7 +408,7 @@ paddingRight: 40
       marginLeft: 16,
       marginRight: 16,
       fontFamily: 'Poppins-Light',
-  fontWeight: '400',
+  // fontWeight: '400',
   fontSize: 12
   },
 
