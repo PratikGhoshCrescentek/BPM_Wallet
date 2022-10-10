@@ -166,6 +166,7 @@ onPress={() => this.props.navigation.goBack()} style={styles.backIconContainer}>
 </View>
 
 
+
 <View style={styles.logoIconContainer}>
 <SvgXml xml={logoXML} />
 </View>
@@ -188,8 +189,7 @@ enter your name and date of birth.
     </Text>
 </View>
 
-<ScrollView
-        keyboardShouldPersistTaps={'always'} style={styles.LoginBody}>
+<View style={styles.LoginBody}>
               <Text style={styles.plainText}>First name</Text>
               <View style={[styles.inputContainer, 
                 {backgroundColor: this.state.TextBoxBackgroundColor, borderColor: this.state.TextBoxBorderColor}]}>
@@ -293,8 +293,7 @@ enter your name and date of birth.
               </View>
               {this.state.errDob && <Text style={[styles.errText, {marginBottom: 30}]}>{this.state.dobErrorText}</Text> }
               
-            </ScrollView>
-           
+            </View>
 
           </SafeAreaView>
           
