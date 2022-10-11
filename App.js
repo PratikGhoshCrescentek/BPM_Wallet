@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SignInPage from './Screen/SignIn';
-import IntroductionPage from './Screen/Introduction';
-import ForgotPasswordPage from './Screen/ForgotPassword';
-import CheckMailPage from './Screen/CheckMail';
-import CreateNewPasswordPage from './Screen/CreateNewPassword';
-import ResetPasswordDonePage from './Screen/ResetPasswordDone';
-import SignUpPersonalDetailsPage from './Screen/SignUpPersonalDetails';
-import SignUpAccountDetailsPage from './Screen/SignUpAccountDetails';
+import SignInPage from './src/features/user_account/screens/SignIn';
+import ForgotPasswordPage from './src/features/user_account/screens/ForgotPassword';
+import CheckMailPage from './src/features/user_account/screens/CheckMail';
+import IntroductionPage from './src/features/user_account/screens/Introduction';
+import CreateNewPasswordPage from './src/features/user_account/screens/CreateNewPassword';
+import ResetPasswordDonePage from './src/features/user_account/screens/ResetPasswordDone';
+import SignUpPersonalDetailsPage from './src/features/user_account/screens/SignUpPersonalDetails';
 
 const AuthStack = createNativeStackNavigator();
 const headerShownFlag = false
@@ -35,11 +34,6 @@ const AuthStackScreen = () => (
       <AuthStack.Screen name="SignUpPersonalDetailsPage" component={SignUpPersonalDetailsPage}  options={{
         headerShown: headerShownFlag,
       }}/>
-      <AuthStack.Screen name="SignUpAccountDetailsPage" component={SignUpAccountDetailsPage}  options={{
-        headerShown: headerShownFlag,
-      }}/>
-      
-      
   </AuthStack.Navigator>
 );
 const RootStack = createNativeStackNavigator();
